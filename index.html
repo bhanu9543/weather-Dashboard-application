@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="APP.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="APP.png">
+</head>
+
+<body>
+    <main>
+        <form id="weatherForm">
+            <input class="location-input" type="text" id="city" placeholder="Enter city" autocomplete="off">
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+        <section class="result">
+            <figure class="temperature">
+                <img id="weatherIcon" src="https://openweathermap.org/img/wn/10d@4x.png" alt="Weather Icon">
+                <figcaption>
+                    <span id="temperature">--</span>
+                    <sup>°C</sup>
+                </figcaption>
+            </figure>
+            <p id="description" class="description">Overcast clouds</p>
+            <div class="info-side">
+                <div class="today-info-container">
+                    <div class="today-info">
+                        <div class="humidity">
+                            <span class="title"><i class="fa-solid fa-droplet"></i> Humidity</span>
+                            <span class="value" id="humidity">--</span>%
+                        </div>
+                        <div class="wind">
+                            <span class="title"><i class="fa-solid fa-wind"></i> Wind</span>
+                            <span class="value" id="wind">--</span> km/h
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="week-container">
+                <ul class="week-list">
+                    <li>
+                        <span class="day-name">Mon</span>
+                        <span class="day-temp">20°C</span>
+                        <span class="day-icon"><i class="fa-solid fa-sun"></i></span>
+                    </li>
+                    <li>
+                        <span class="day-name">Tue</span>
+                        <span class="day-temp">22°C</span>
+                        <span class="day-icon"><i class="fa-solid fa-cloud-sun"></i></span>
+                    </li>
+                    <li>
+                        <span class="day-name">Wed</span>
+                        <span class="day-temp">18°C</span>
+                        <span class="day-icon"><i class="fa-solid fa-cloud"></i></span>
+                    </li>
+                    <li>
+                        <span class="day-name">Thu</span>
+                        <span class="day-temp">15°C</span>
+                        <span class="day-icon"><i class="fa-solid fa-cloud-rain"></i></span>
+                    </li>
+                    <li>
+                        <span class="day-name">Fri</span>
+                        <span class="day-temp">17°C</span>
+                        <span class="day-icon"><i class="fa-solid fa-sun-cloud"></i></span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <!-- JavaScript files -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
